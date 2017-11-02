@@ -36,7 +36,7 @@ gem 'autoprefixer-rails'
 gem 'jquery-rails'
 # gem "simple_form"
 gem 'pry'
-gem 'sqlite3'
+# gem 'sqlite3'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
