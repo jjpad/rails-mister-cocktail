@@ -1,11 +1,18 @@
-# require 'open-uri'
 # require 'json'
+# require 'open-uri'
+# require 'pry'
 
-# ingredients = ActiveSupport::JSON.decode(File.read("http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list"))
-# ingredients = ingredients[0]
+# url = 'http://www.thecocktaildb.com/api/json/v1/1/list.php?i=list'
+# data_serialized = open(url).read
+# data = JSON.parse(data_serialized)
 
-# ingredients.each do |name|
-#   Ingredient.create!(
-#     name: name
-#   )
+# data["drinks"].each do |name|
+#   name = element["strIngredient1"]
+#   ingr = Ingredient.create(name: name)
+#   puts "#{ingr.name}"
 # end
+# binding.pry
+
+Ingredient.create(name: "lemon")
+Ingredient.create(name: "ice")
+Ingredient.create(name: "mint leaves")
