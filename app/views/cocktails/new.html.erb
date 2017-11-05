@@ -1,12 +1,20 @@
-<h1>Add a cocktail!</h1>
+<div class="text-center">
+  <h1>Add a cocktail!</h1>
+</div>
 
-<%= simple_form_for(@cocktail) do |f| %>
-<%= f.input :name %>
-<%= f.submit %>
+<div class="text-center">
+  <%= simple_form_for(@cocktail) do |f| %>
+  <%= f.input :name %>
+  <p>
+    <%= f.submit class: "btn btn-danger" %>
+  </p>
+</div>
 <% end %>
 
 
-<%= link_to 'Back', cocktails_path %>
+<p class="text-center">
+  <%= link_to 'Back', cocktails_path, class: "btn btn-danger" %>
+</p>
 
 
 
@@ -22,4 +30,4 @@
 
 get info from user
 send it thorugh the params to a route/controller action
-  -->
+-->
